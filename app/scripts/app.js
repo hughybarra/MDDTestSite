@@ -40,6 +40,7 @@ mddtestSite.run(['$firebaseSimpleLogin', '$rootScope','$location', function($fir
   // console.log($rootScope.loginObj.user);
 
   // check the login status of a user
+  // need to turn this into a factory!
   if (!$rootScope.loginObj.user){
     console.log('not loggedin');
 

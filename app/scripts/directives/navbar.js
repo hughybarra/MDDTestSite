@@ -18,23 +18,26 @@ angular.module('mddtestSiteApp')
 				];
 
 				scope.getStat = function(){
+					console.log('getStat');
 					var divStat = '';
 
-					if (scope.navtoggle === false){
+					if (scope.navToggle === false){
 						// options is off the page
 						divStat = 'snv-container-right';
 
 						// push main page to left
 						scope.containerstat = 'main-container-push-open';
-					}else if (scope.navtoggle === true){
+					}else if (scope.navToggle === true){
 						divStat = 'snv-container-right-open';
 						$rootScope.containerStat = 'main-container-push';
 					}
-
+					console.log(divStat);
 					return divStat;
+
 				};
 
 				scope.barToggle = function(){
+					console.log('bar toggle');
 					if(scope.navToggle === false){
 						scope.navToggle = true;
 					}else if (scope.navToggle === true){
@@ -43,12 +46,14 @@ angular.module('mddtestSiteApp')
 				};
 
 				// Clicks
-				scope.hidebar = function(){
+				scope.hideBar = function(){
+					console.log('hidebar');
 					scope.barToggle();
 					scope.getStat();
 				};
 
 				scope.optionsClick = function(){
+
 					console.log('options clicked');
 					scope.barToggle();
 					scope.getStat();

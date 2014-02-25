@@ -8,7 +8,6 @@ angular.module('mddtestSiteApp')
 		console.log('not loggedin');
 		var viewA = '/login';
 		$location.path(viewA);
-
 	}
 
 	var url = 'https://mddproj.firebaseio.com' + $location.$$path;
