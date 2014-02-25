@@ -3,8 +3,10 @@
 /* global Firebase */
 angular.module('mddtestSiteApp')
 .controller('SubjectlistCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$firebase',function ($scope, $routeParams, $location, $rootScope, $firebase) {
+	console.log('Subjects List Running');
 	// setting root scope var to auto hide forms
 	// auto show add button
+
 	$rootScope.forSwapToggle = true;
 
 	console.log($routeParams.id);

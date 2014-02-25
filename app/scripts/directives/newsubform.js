@@ -2,7 +2,7 @@
 
 /* global Firebase */
 angular.module('mddtestSiteApp')
-  .directive('newsubform', function () {
+  .directive('newSubForm', function () {
     return {
 			templateUrl: 'views/directives/newSubForm.html',
 			restrict: 'E',
@@ -81,7 +81,6 @@ angular.module('mddtestSiteApp')
 					$scope.article.articleTitle = $scope.NUSubject.title;
 					$scope.article.message = $scope.mainArticle;
 					console.log($scope.article);
-
 
 					$scope.items.$add($scope.article);
 
