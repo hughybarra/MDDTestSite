@@ -31,9 +31,25 @@ var mddtestSite = angular.module('mddtestSiteApp', [
   });
 
 
-mddtestSite.run(['$firebaseSimpleLogin', '$rootScope', function($firebaseSimpleLogin, $rootScope){
+mddtestSite.run(['$firebaseSimpleLogin', '$rootScope','$location', function($firebaseSimpleLogin, $rootScope, $location){
     // conect to server
   var dataRef = new Firebase('https://mddproj.firebaseio.com/');
   // // init fire base simple login
   $rootScope.loginObj = $firebaseSimpleLogin(dataRef);
+
+  // console.log($rootScope.loginObj.user);
+
+  // check the login status of a user
+  if (!$rootScope.loginObj.user){
+    console.log('not loggedin');
+
+    var view = '/login';
+    $location.path(view);
+
+  }else{
+    console.log('logged in');
+
+  }
+
+
 }]);

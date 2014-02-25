@@ -3,6 +3,14 @@
 /* global Firebase */
 angular.module('mddtestSiteApp')
 .controller('SubjectlistCtrl', ['$scope', '$routeParams', '$location', '$rootScope', '$firebase',function ($scope, $routeParams, $location, $rootScope, $firebase) {
+	// check the login status
+	if (!$rootScope.loginObj.user){
+		console.log('not loggedin');
+		var viewA = '/login';
+		$location.path(viewA);
+
+	}
+
 	console.log('Subjects List Running');
 	// setting root scope var to auto hide forms
 	// auto show add button

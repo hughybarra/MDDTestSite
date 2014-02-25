@@ -3,6 +3,14 @@
 /* global Firebase */
 angular.module('mddtestSiteApp')
   .controller('HomeCtrl', [ '$scope', '$location', '$rootScope', '$firebase', function ($scope, $location, $rootScope, $firebase) {
+
+	// check the login status
+	if (!$rootScope.loginObj.user){
+		console.log('not loggedin');
+		var view = '/login';
+		$location.path(view);
+
+	}
   // hiding form
 	$scope.newSub = false;
 	var url = 'https://mddproj.firebaseio.com/subjects';

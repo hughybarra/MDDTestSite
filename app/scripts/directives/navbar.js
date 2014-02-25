@@ -5,6 +5,9 @@ angular.module('mddtestSiteApp')
     return {
 			templateUrl: 'views/nav/navBar.html',
 			restrict: 'E',
+			controller: function(){
+
+			},
 			link: function postLink(scope, element, attrs, $rootScope) {
 			// postLink(scope, element, attrs)
 				scope.navToggle = false;
@@ -50,6 +53,7 @@ angular.module('mddtestSiteApp')
 					scope.barToggle();
 					scope.getStat();
 				};
+
 			}
     };
   });
