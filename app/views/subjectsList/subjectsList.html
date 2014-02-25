@@ -1,0 +1,33 @@
+<!-- Loop over all of the user submitted subjects -->
+<div class="col-xs-12" ng-swipe-right="swipeItRight()" >
+
+	<div ng-hide="formSwapToggle">
+		<div class="subjectDiv">
+			<div class="panel panel-default text-center" ng-click="formSwap()">
+				<div class="panel-body">
+					Add an Article
+				</div>
+			</div>
+
+			<div class="panel panel-default" ng-repeat="($id, data) in items">
+
+				<div class="panel-body" ng-click="goToDetail()">
+					<p class=" lead text-center">{{data.articleTitle}}</p>
+		  		</div>
+
+			</div>
+			<hr>
+		</div>
+	</div>
+
+	<new-sub-form></new-sub-form>
+
+</div>
+
+
+
+
+
+
+
+

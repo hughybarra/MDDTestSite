@@ -6,9 +6,16 @@
  ╚████╔╝ ██║  ██║██║  ██║███████║
   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
 */
+
+
+@light-blue: #47a3da;
+@darker-blue: #afdefa;
 /*
 snv = side nav view
 */
+
+
+
 /*
 ███████╗██╗██████╗ ███████╗    ███╗   ██╗ █████╗ ██╗   ██╗
 ██╔════╝██║██╔══██╗██╔════╝    ████╗  ██║██╔══██╗██║   ██║
@@ -18,47 +25,56 @@ snv = side nav view
 ╚══════╝╚═╝╚═════╝ ╚══════╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝
 */
 .snv-container {
-  background-color: #47a3da;
-  position: fixed;
+	background-color: @light-blue;
+	position: fixed;
 }
+
 .snv-container h3 {
-  color: #afdefa;
-  font-size: 1.9em;
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-  background-: #0dyyb6;
+	color: @darker-blue;
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	background-: #0dyyb6;
 }
+
+
 .snv-container-vertical {
-  width: 240px;
-  height: 100%;
-  right: -240px;
-  top: 0;
-  z-index: 1000;
+	width: 240px;
+	height: 100%;
+	right: -240px;
+	top: 0;
+	z-index: 1000;
 }
+
 .snv-container-right {
-  right: -240px;
+	right: -240px;
 }
-.snv-container-right-open {
-  right: 0px;
+
+.snv-container-right-open{
+	right: 0px;
 }
+
 .main-container-push {
-  position: relative;
-  left: -240px;
+
+	position: relative;
+	left: -240px;
 }
-.main-containter-push-open {
-  left: 0px;
+.main-containter-push-open{
+	left: 0px;
 }
+
 /* Transitions */
 .main-container-push,
 .main-container-push-open,
 .snv-container,
 .snv-container-push {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all .2s ease;
-  transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 /* End Side Nav -------------------- */
+
 /*
 New Subject
 ███████╗████████╗██╗   ██╗██╗     ███████╗███████╗
@@ -68,19 +84,21 @@ New Subject
 ███████║   ██║      ██║   ███████╗███████╗███████║
 ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝╚══════╝
 */
-.articleSegment {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.articleSegment{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .articleHolder {
-  margin-top: 25px;
-  margin-bottom: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
+
 .NUSLink {
-  background-color: red;
-  width: 100px;
-  height: 100px;
+	background-color: red;
+	width: 100px;
+	height: 100px;
 }
-.NUSMessage {
-  background-color: blue;
+
+.NUSMessage{
+ 	background-color: blue;
 }

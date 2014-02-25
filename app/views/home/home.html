@@ -1,0 +1,34 @@
+<!-- Loop over all of the subject -->
+<div class="col-xs-12" ng-hide="newSub">
+	<p class="lead text-center">Pick your subject below and find out how others learned to solve their problems</p>
+	<hr>
+
+	<li ng-repeat="($id, item) in items" class="list-group-item">
+		<!-- change the default height on these plox -->
+		<p ng-click="subjectClicked()" class="text-center">{{item.subjectName}}</p>
+		<!-- Delete this when done -->
+	<!-- 	<p>{{$id}}</p> -->
+	</li>
+	<!-- List - group - item - success is not working for some reason -->
+	<li class="list-group-item text-center" ng-click="addSubject()"><span class="glyphicon glyphicon-plus"></span></li>
+</div>
+
+<div class="col-xs-12" ng-show="newSub">
+	<p class="lead text-center">Come up with your own subjects</p>
+	<hr>
+
+	<form role="form" novalidate class="col-xs-12" name="newSubjectForm">
+		<h3>Add New Subject</h3>
+		<hr>
+
+		<div class="form-group">
+
+			<label for="subName">Subject Name</label>
+			<input type="text" ng-model="mainSubjects.subjectName" id="subName" class="form-control">
+
+		</div>
+		<button type="submit" ng-click="backLink()" class="btn btn-default pull-left"><span class="glyphicon glyphicon-chevron-left"></span>Back</button>
+		<button type="submit" ng-click="submitNewSubject()" class="btn btn-default pull-right">Add Project</button>
+	</form>
+
+</div>

@@ -1,0 +1,47 @@
+<!-- <div ng-show="showForm"> -->
+<div ng-show="formSwapToggle">
+	<div class="col-xs-12" ng-show="formStage">
+		<!-- <form role="form" ng-show="formOne"> -->
+		<form role="form">
+			<p class="lead text-center">Give your article a title</p>
+			<hr>
+			<div class="form-group">
+				<label for="subName">Article Title</label>
+				<input type="text" ng-model="NUSubject.title" id="subName" class="form-control">
+			</div>
+
+			<button class="btn tbn-default pull-left col-xs-3" ng-click="toggleBack()">Back</button>
+			<button class="btn btn-default pull-right col-xs-3" ng-click="formStageSet()">next</button>
+		</form>
+
+	</div>
+
+	<div class="col-xs-12" ng-hide="formStage">
+
+		<h3>{{NUSubject.title}}</h3>
+		<hr>
+		<div class="articleHolder" ng-repeat="data in mainArticle" >
+			<span class="ng-class: data.type; ">{{data.message}}</span>
+		</div>
+
+		<form role="form" name="superAwesomeForm">
+			<div ng-show="inputPrompt">
+				<hr>
+				<p class="small" >Build your article one piece at a time. Every time you add a comment or a link your text will be added to the end of the document. You can add either a comment or a link, or both a link and a comment at the same time. Hit Save when you're ready to submit it for good. You can add as many comments or links as you would like</p>
+				<hr>
+			</div>
+			<div class="form-group">
+				<label for="subName">Add Article</label>
+				<textarea id="subName" class="form-control" ng-model="NUSubject.comment">
+				</textarea>
+			</div>
+			<div class="form-group">
+				<label for="addLink">Add A Link</label>
+				<input type="url" id="AddLink" class="form-control" ng-model="NUSubject.webLink" placeholder="http://www.somedomain.com">
+			</div>
+			<button class="btn btn-default col-xs-12" ng-click="appendToArticle()">add to document</button>
+
+			<button class="btn btn-default col-xs-12" ng-click="saveProject()">Save Project</button>
+		</form>
+	</div>
+</div>

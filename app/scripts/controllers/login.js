@@ -1,10 +1,9 @@
 'use strict';
 
 angular.module('mddtestSiteApp')
-  .controller('LoginCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('LoginCtrl', ['$scope', '$rootScope',function ($scope, $rootScope) {
+	//clicks
+	$scope.attemptLogin = function(){
+		$rootScope.loginObj.$locin('facebook');
+	};
+}]);
