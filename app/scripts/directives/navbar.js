@@ -5,8 +5,8 @@ angular.module('mddtestSiteApp')
     return {
 			templateUrl: 'views/nav/navBar.html',
 			restrict: 'E',
-			controller: function(){
-
+			controller: function($rootScope){
+				// console.log($rootScope.loginObj);
 			},
 			link: function postLink(scope, element, attrs, $rootScope) {
 			// postLink(scope, element, attrs)
@@ -18,7 +18,7 @@ angular.module('mddtestSiteApp')
 				];
 
 				scope.getStat = function(){
-					console.log('getStat');
+					// console.log('getStat');
 					var divStat = '';
 
 					if (scope.navToggle === false){
@@ -31,13 +31,13 @@ angular.module('mddtestSiteApp')
 						divStat = 'snv-container-right-open';
 						$rootScope.containerStat = 'main-container-push';
 					}
-					console.log(divStat);
+					// console.log(divStat);
 					return divStat;
 
 				};
 
 				scope.barToggle = function(){
-					console.log('bar toggle');
+					// console.log('bar toggle');
 					if(scope.navToggle === false){
 						scope.navToggle = true;
 					}else if (scope.navToggle === true){
@@ -47,16 +47,21 @@ angular.module('mddtestSiteApp')
 
 				// Clicks
 				scope.hideBar = function(){
-					console.log('hidebar');
+					// console.log('hidebar');
 					scope.barToggle();
 					scope.getStat();
 				};
 
 				scope.optionsClick = function(){
 
-					console.log('options clicked');
+					// console.log('options clicked');
 					scope.barToggle();
 					scope.getStat();
+				};
+
+
+				scope.logUserOut = function(){
+						// console.log($rootScope.loginObj);
 				};
 
 			}

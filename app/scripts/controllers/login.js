@@ -1,21 +1,14 @@
 'use strict';
 
 angular.module('mddtestSiteApp')
-.controller('LoginCtrl', ['$scope', '$rootScope','$location',function ($scope, $rootScope, $location) {
+.controller('LoginCtrl', ['$scope', '$rootScope','$location','checklogin',function ($scope, $rootScope, $location, checklogin) {
 	//clicks
 	$scope.attemptLogin = function(){
 		$rootScope.loginObj.$login('facebook');
-		var view = '';
-		if (!$rootScope.loginObj.user){
-			console.log('not loggedin');
+		var user = $rootScope.loginObj.user.username;
 
-			view = '/login';
-			$location.path(view);
+		var x = checklogin.setUser(user);
+		console.log(x);
 
-		}else{
-			console.log('logged in');
-			view = '/home';
-			$location.path(view);
-		}
 	};
 }]);

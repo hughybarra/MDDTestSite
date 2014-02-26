@@ -21,8 +21,6 @@ angular.module('mddtestSiteApp')
 				$scope.items = $firebase(new Firebase(url));
 				$scope.items.$bind($scope, 'remoteItems');
 
-				// https://mddproj.firebaseio.com/subjects/-JGUY4nM-ooFz6CQ_GS5
-
 				// clicks
 				// swap the stage of the form
 				$scope.formStageSet = function(){
@@ -77,7 +75,9 @@ angular.module('mddtestSiteApp')
 				};
 							// save project button
 				$scope.saveProject = function(){
+					console.log($rootScope.loginObj.user.displayName);
 
+					$scope.article.author = $rootScope.loginObj.user.displayName;
 					$scope.article.articleTitle = $scope.NUSubject.title;
 					$scope.article.message = $scope.mainArticle;
 					console.log($scope.article);
@@ -86,7 +86,6 @@ angular.module('mddtestSiteApp')
 
 					// empty the form
 
-					// $scope.user = angular.copy($scope.master);
 					$scope.article = angular.copy($scope.master);
 					$scope.NUSubject.title = '';
 					$scope.mainArticle = {};

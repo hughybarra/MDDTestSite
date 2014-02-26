@@ -11,11 +11,11 @@ var mddtestSite = angular.module('mddtestSiteApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/home/home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
       })
       .when('/login', {
         templateUrl: 'views/login/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
       })
       .when('/subjects/:id', {
         templateUrl: 'views/subjectsList/subjectsList.html',
@@ -30,27 +30,25 @@ var mddtestSite = angular.module('mddtestSiteApp', [
       });
   });
 
-
-mddtestSite.run(['$firebaseSimpleLogin', '$rootScope','$location', function($firebaseSimpleLogin, $rootScope, $location){
+mddtestSite.run(['$firebaseSimpleLogin', '$rootScope', 'checklogin', '$location', function($firebaseSimpleLogin, $rootScope, checklogin, $location){
     // conect to server
   var dataRef = new Firebase('https://mddproj.firebaseio.com/');
   // // init fire base simple login
   $rootScope.loginObj = $firebaseSimpleLogin(dataRef);
 
-  // console.log($rootScope.loginObj.user);
+  $rootScope.$on('$routeChangeStart', function(){
+    if (!checklogin.isLoggedIn()){
 
-  // check the login status of a user
-  // need to turn this into a factory!
-  if (!$rootScope.loginObj.user){
-    console.log('not loggedin');
+      console.log('Reject Login');
+      event.preventDefault();
+      $location.path('/login');
 
-    var view = '/login';
-    $location.path(view);
+    }else{
 
-  }else{
-    console.log('logged in');
+      console.log('Authenticated');
+      $location.path('/home');
 
-  }
-
+    }
+  });
 
 }]);
