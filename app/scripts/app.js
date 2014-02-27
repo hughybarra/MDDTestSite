@@ -35,8 +35,10 @@ mddtestSite.run(['$firebaseSimpleLogin', '$rootScope', 'checklogin', '$location'
   var dataRef = new Firebase('https://mddproj.firebaseio.com/');
   // // init fire base simple login
   $rootScope.loginObj = $firebaseSimpleLogin(dataRef);
+  // console.log($rootScope.loginObj);
 
   $rootScope.$on('$routeChangeStart', function(){
+    console.log('route change start watch');
     if (!checklogin.isLoggedIn()){
 
       console.log('Reject Login');
@@ -44,10 +46,8 @@ mddtestSite.run(['$firebaseSimpleLogin', '$rootScope', 'checklogin', '$location'
       $location.path('/login');
 
     }else{
-
       console.log('Authenticated');
-      $location.path('/home');
-
+      // $location.path('/home');
     }
   });
 

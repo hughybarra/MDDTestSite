@@ -7,8 +7,16 @@ angular.module('mddtestSiteApp')
 		$rootScope.loginObj.$login('facebook');
 		var user = $rootScope.loginObj.user.username;
 
-		var x = checklogin.setUser(user);
-		console.log(x);
+		checklogin.setUser(user);
+
+		var userStat =checklogin.isLoggedIn();
+
+
+		if (userStat){
+			var view = '/home';
+			$location.path(view);
+		}
+
 
 	};
 }]);

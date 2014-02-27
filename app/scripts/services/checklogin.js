@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('mddtestSiteApp')
-.factory('checklogin', ['$rootScope', function () {
+.factory('checklogin', function () {
 
 	var user;
 
 	return {
 		setUser: function(someUser){
 			user = someUser;
+			console.log(user);
 		},
 		isLoggedIn: function(){
 			var userStat;
@@ -22,4 +23,4 @@ angular.module('mddtestSiteApp')
 		}
 	};
 
-}]);
+});

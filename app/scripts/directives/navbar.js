@@ -5,8 +5,20 @@ angular.module('mddtestSiteApp')
     return {
 			templateUrl: 'views/nav/navBar.html',
 			restrict: 'E',
-			controller: function($rootScope){
-				// console.log($rootScope.loginObj);
+			controller: function($rootScope, $location, checklogin){
+				console.log($rootScope.loginObj);
+
+				$rootScope.logUserOut = function(){
+					// $rootScope.loginObj
+					// console.log($rootScope.loginObj);
+					$rootScope.loginObj.$logout();
+					checklogin.setUser();
+					checklogin.isLoggedIn();
+
+					var view = '/login';
+					$location.path(view);
+				};
+
 			},
 			link: function postLink(scope, element, attrs, $rootScope) {
 			// postLink(scope, element, attrs)
@@ -58,12 +70,6 @@ angular.module('mddtestSiteApp')
 					scope.barToggle();
 					scope.getStat();
 				};
-
-
-				scope.logUserOut = function(){
-						// console.log($rootScope.loginObj);
-				};
-
 			}
     };
   });
