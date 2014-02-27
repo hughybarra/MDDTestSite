@@ -1,16 +1,16 @@
 <!-- Loop over all of the subject -->
-<div class="col-xs-12" ng-hide="newSub">
+<div class="col-xs-12 bgColor" ng-hide="newSub">
 	<p class="lead text-center">Pick your subject below and find out how others learned to solve their problems</p>
 	<hr>
 
-	<li ng-repeat="($id, item) in items" class="list-group-item">
+	<li ng-repeat="($id, item) in items" class="list-group-item listHeight pointHover">
 		<!-- change the default height on these plox -->
-		<p ng-click="subjectClicked()" class="text-center">{{item.subjectName}}</p>
+		<h4 ng-click="subjectClicked()" class="text-center">{{item.subjectName}}</h4>
 		<!-- Delete this when done -->
 	<!-- 	<p>{{$id}}</p> -->
 	</li>
 	<!-- List - group - item - success is not working for some reason -->
-	<li class="list-group-item text-center" ng-click="addSubject()"><span class="glyphicon glyphicon-plus"></span></li>
+	<li class="list-group-item list-group-item-success text-center height10 pointHover" ng-click="addSubject()"><span class="glyphicon glyphicon-plus "></span></li>
 </div>
 
 <div class="col-xs-12" ng-show="newSub">
@@ -28,7 +28,8 @@
 
 		</div>
 		<button type="submit" ng-click="backLink()" class="btn btn-default pull-left"><span class="glyphicon glyphicon-chevron-left"></span>Back</button>
-		<button type="submit" ng-click="submitNewSubject()" class="btn btn-default pull-right">Add Project</button>
+
+		<button type="submit" ng-click="submitNewSubject()" class="btn btn-success pull-right pointHover">Add Project</button>
 	</form>
 
 </div>

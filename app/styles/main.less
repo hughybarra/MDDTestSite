@@ -11,7 +11,16 @@
 @light-blue: #47a3da;
 @darker-blue: #afdefa;
 
+.pointHover{
+	cursor: pointer;
+}
 
+.height10{
+	margin-top: 10px;
+}
+.height20{
+	margin-top: 20px;
+}
 
 /*
 ██████╗  ██████╗ ██████╗ ██╗   ██╗
@@ -25,18 +34,8 @@ global body
 
 @col1: #E1D772;
 @col2: #FAF4B1;
-@textCol: #394240;
+@textCol: #efeaea;
 
-body {
-	color: @textCol;
-	background-color: @col1;
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@col1), to(@col2));
-	background-image: -webkit-linear-gradient(top, @col1, @col2);
-	background-image:    -moz-linear-gradient(top, @col1, @col2);
-	background-image:     -ms-linear-gradient(top, @col1, @col2);
-	background-image:      -o-linear-gradient(top, @col1, @col2);
-}
-/* end body ----------------------- */
 
 /*
 ██╗      ██████╗  ██████╗ ██╗███╗   ██╗
@@ -46,16 +45,9 @@ body {
 ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║
 ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝
 */
+.facebookLink{
 
-.loginContainer {
-	background-color: black;
-	// overflow-y: hidden;
-	margin-bottom: 0px;
 }
-.loginContainer a {
-	margin-left: 20%;
-}
-
 /* end login --------------------- */
 
 /*
@@ -67,10 +59,12 @@ body {
 ╚══════╝╚═╝╚═════╝ ╚══════╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝
 
 snv = side nav view
-
 */
+
+@darkBackground: #222222;
+
 .snv-container {
-	background-color: @light-blue;
+	background-color: @darkBackground;
 	position: fixed;
 }
 
@@ -82,9 +76,14 @@ snv = side nav view
 	font-weight: 300;
 	background-: #0dyyb6;
 }
+.snv-container a {
+	margin-left: 20px;
+	cursor: pointer;
+}
 
 
 .snv-container-vertical {
+	border: 3px solid #ffffff;
 	width: 240px;
 	height: 100%;
 	right: -240px;
@@ -129,21 +128,50 @@ New Subject
 ██║ ╚████║███████╗╚███╔███╔╝    ███████║╚██████╔╝██████╔╝
 ╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝     ╚══════╝ ╚═════╝ ╚═════╝
 */
+@linkColor: #2a9fd6;
 .articleSegment{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .articleHolder {
-	margin-top: 25px;
-	margin-bottom: 25px;
 }
 
 .NUSLink {
-	background-color: red;
-	width: 100px;
-	height: 100px;
+	color: @linkColor;
 }
 
 .NUSMessage{
- 	background-color: blue;
+
+}
+
+/*
+ █████╗ ██████╗ ████████╗███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+███████║██████╔╝   ██║   █████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║  ██║██║  ██║   ██║   ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+
+*/
+@formWell: #222222;
+
+.customFormStyle{
+	margin-top: 20px;
+	background-color: @formWell;
+}
+.customFormStyle button{
+	margin-bottom: 15px;
+}
+
+/*
+██╗  ██╗ ██████╗ ███╗   ███╗███████╗
+██║  ██║██╔═══██╗████╗ ████║██╔════╝
+███████║██║   ██║██╔████╔██║█████╗
+██╔══██║██║   ██║██║╚██╔╝██║██╔══╝
+██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+*/
+
+.listHeight{
+	margin-top: 10px;
 }

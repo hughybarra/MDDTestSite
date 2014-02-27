@@ -4,8 +4,12 @@
 	<hr>
 
 	<div ng-repeat="data in items.message">
-		<div class="ng-class: data.type; ">{{data.message}}</div>
+
+		<a ng-if="data.type == 'NUSLink'">{{data.message}}</a>
+		<p ng-if="data.type == 'NUSMessage'">{{data.message}}</p>
+
 	</div>
+
 	<hr>
 
 </article>

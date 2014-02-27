@@ -1,4 +1,4 @@
-<!-- Loop over all of the user submitted subjects -->
+	<!-- Loop over all of the user submitted subjects -->
 <div class="col-xs-12" ng-swipe-right="swipeItRight()" >
 
 	<div ng-hide="formSwapToggle">
@@ -9,7 +9,7 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default" ng-repeat="($id, data) in items">
+			<div class="panel panel-default " ng-repeat="($id, data) in items">
 
 				<div class="panel-body" ng-click="goToDetail()">
 					<p class=" lead text-center">{{data.articleTitle}}</p>

@@ -6,6 +6,15 @@
  ╚████╔╝ ██║  ██║██║  ██║███████║
   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
 */
+.pointHover {
+  cursor: pointer;
+}
+.height10 {
+  margin-top: 10px;
+}
+.height20 {
+  margin-top: 20px;
+}
 /*
 ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -15,16 +24,6 @@
 ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝
 global body
 */
-body {
-  color: #394240;
-  background-color: #e1d772;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e1d772), to(#faf4b1));
-  background-image: -webkit-linear-gradient(top, #e1d772, #faf4b1);
-  background-image: -moz-linear-gradient(top, #e1d772, #faf4b1);
-  background-image: -ms-linear-gradient(top, #e1d772, #faf4b1);
-  background-image: -o-linear-gradient(top, #e1d772, #faf4b1);
-}
-/* end body ----------------------- */
 /*
 ██╗      ██████╗  ██████╗ ██╗███╗   ██╗
 ██║     ██╔═══██╗██╔════╝ ██║████╗  ██║
@@ -33,13 +32,6 @@ body {
 ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║
 ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝
 */
-.loginContainer {
-  background-color: black;
-  margin-bottom: 0px;
-}
-.loginContainer a {
-  margin-left: 20%;
-}
 /* end login --------------------- */
 /*
 ███████╗██╗██████╗ ███████╗    ███╗   ██╗ █████╗ ██╗   ██╗
@@ -50,10 +42,9 @@ body {
 ╚══════╝╚═╝╚═════╝ ╚══════╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝
 
 snv = side nav view
-
 */
 .snv-container {
-  background-color: #47a3da;
+  background-color: #222222;
   position: fixed;
 }
 .snv-container h3 {
@@ -64,7 +55,12 @@ snv = side nav view
   font-weight: 300;
   background-: #0dyyb6;
 }
+.snv-container a {
+  margin-left: 20px;
+  cursor: pointer;
+}
 .snv-container-vertical {
+  border: 3px solid #ffffff;
   width: 240px;
   height: 100%;
   right: -240px;
@@ -107,15 +103,33 @@ New Subject
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.articleHolder {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
 .NUSLink {
-  background-color: red;
-  width: 100px;
-  height: 100px;
+  color: #2a9fd6;
 }
-.NUSMessage {
-  background-color: blue;
+/*
+ █████╗ ██████╗ ████████╗███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+███████║██████╔╝   ██║   █████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║  ██║██║  ██║   ██║   ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+
+*/
+.customFormStyle {
+  margin-top: 20px;
+  background-color: #222222;
+}
+.customFormStyle button {
+  margin-bottom: 15px;
+}
+/*
+██╗  ██╗ ██████╗ ███╗   ███╗███████╗
+██║  ██║██╔═══██╗████╗ ████║██╔════╝
+███████║██║   ██║██╔████╔██║█████╗
+██╔══██║██║   ██║██║╚██╔╝██║██╔══╝
+██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+*/
+.listHeight {
+  margin-top: 10px;
 }

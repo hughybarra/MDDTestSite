@@ -1,8 +1,8 @@
 <nav class="navbar navbar-inverse col-xs-12" role="navigation">
 
-	<p class="navbar-text lead pull-left">Welcome To Hugo's Workshop </p>
+	<p class="navbar-text lead pull-left pointHover" ng-click="takeMeHome()">Curving Learn</p>
 
-	<span class="navbar-text pull-right glyphicon glyphicon-align-justify" ng-click="optionsClick()"></span>
+	<span class="navbar-text pull-right glyphicon glyphicon-align-justify pointHover" ng-click="optionsClick()"></span>
 
 </nav>
 
@@ -10,4 +10,5 @@
 <nav ng-click="hideBar()" class="ng-class: getStat(); snv-container snv-container-vertical" >
 		<h3>Options</h3>
 		<a class="lead text-center" ng-click="logUserOut()">Log Out</a>
+		<hr>
 </nav>

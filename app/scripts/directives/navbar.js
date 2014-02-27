@@ -2,10 +2,11 @@
 
 angular.module('mddtestSiteApp')
   .directive('navbar', function () {
+
     return {
 			templateUrl: 'views/nav/navBar.html',
 			restrict: 'E',
-			controller: function($rootScope, $location, checklogin){
+			controller: function($rootScope, $location, checklogin, $scope){
 				console.log($rootScope.loginObj);
 
 				$rootScope.logUserOut = function(){
@@ -19,6 +20,10 @@ angular.module('mddtestSiteApp')
 					$location.path(view);
 				};
 
+				$scope.takeMeHome = function(){
+					var view = '/home';
+					$location.path(view);
+				};
 			},
 			link: function postLink(scope, element, attrs, $rootScope) {
 			// postLink(scope, element, attrs)
@@ -70,6 +75,8 @@ angular.module('mddtestSiteApp')
 					scope.barToggle();
 					scope.getStat();
 				};
+
+
 			}
     };
   });
