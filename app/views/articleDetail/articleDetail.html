@@ -5,7 +5,7 @@
 
 	<div ng-repeat="data in items.message">
 
-		<a ng-if="data.type == 'NUSLink'">{{data.message}}</a>
+		<a ng-if="data.type == 'NUSLink'" ng-href="{{data.message}}">{{data.message}}</a>
 		<p ng-if="data.type == 'NUSMessage'">{{data.message}}</p>
 
 	</div>
